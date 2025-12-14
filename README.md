@@ -32,3 +32,5 @@ the app is a gift shop that contains flowers, cake and candales. you can customi
 *
 *
 *
+
+## credits
