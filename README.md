@@ -15,7 +15,7 @@ The application is a gift shop that offers flowers, cakes, and candles. Users ca
 ![Component Hierarchy Diagram](https://i.imgur.com/1ku4C1J.png)
 
 ## Trello board link
-   [Trello Board]
+   [Trello Board](https://trello.com/b/vCNBSwZw/bloom-bites)
 
 ## App wireframe
 [App wireframe]
