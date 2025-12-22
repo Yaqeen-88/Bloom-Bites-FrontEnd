@@ -1,39 +1,16 @@
-# Bloom-Bites-FrontEnd
+# React + Vite
 
-## Idea description
-The application is a gift shop that offers flowers, cakes, and candles. Users can create custom gift sets by combining two items, ensuring that each gift is unique. Also, the app offers full customization for cakes, allowing users to choose from different flavors, sizes, decorations, and personalized messages. By giving users the ability to tailor gifts to any occasion, such as birthdays, anniversaries, or special celebrations, the app makes the gifting experience both meaningful and convenient.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-#### Logo:
-![App Logo]
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## React Compiler
 
-## App ERD
-![App ERD](https://i.imgur.com/poDrMAm.png)
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## Component Hierarchy Diagram 
-![Component Hierarchy Diagram](https://i.imgur.com/1ku4C1J.png)
+## Expanding the ESLint configuration
 
-## Trello board link
-   [Trello Board](https://trello.com/b/vCNBSwZw/bloom-bites)
-
-## App wireframe
-[App wireframe]
-
-## Deployment  Link
-[Bloom-Bites]
-
-
-## Future enhancements
-*
-*
-*
-*
-
-## Technologies used
-*
-*
-*
-*
-
-## credits
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
