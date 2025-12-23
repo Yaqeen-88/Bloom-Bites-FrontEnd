@@ -1,4 +1,10 @@
 body{
-  margin: 0;
+  margin: 50px;
   box-sizing: border-box;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
 }
