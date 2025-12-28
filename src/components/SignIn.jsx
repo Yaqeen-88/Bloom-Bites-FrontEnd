@@ -18,7 +18,7 @@ const handleSubmit = async (e) => {
   const userData = await SignInUser(formValues)
   setFormValues(initialState)
   setUser(userData)
-  navigate('/feed')
+  navigate('/')
 }
 
 return(
