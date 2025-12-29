@@ -1,34 +1,44 @@
 import { Link } from "react-router-dom"
-import '../App.css'
+import "../App.css"
 
-const Nav = ({ user, handleLogout }) => {
+const Nav = ({ user, handleLogout, cartCount }) => {
   let userOptions
   if (user) {
     userOptions = (
-      <>
-        <h3>Welcome {user.name}!</h3>
-
-
-        <Link onClick={handleLogout} to="/">
+      <div className="nav-links">
+        <Link to="/" className="nav-link">
+          Home
+        </Link>
+        <Link to="/cart" className="nav-cart">
+          🛒
+          {cartCount > 0 ? (
+            <span className="cart-count">{cartCount}</span>
+          ) : null}
+        </Link>
+        <Link onClick={handleLogout} to="/" className="nav-link">
           Sign Out
         </Link>
-      </>
+      </div>
     )
   }
 
   const publicOptions = (
-    <>
-
-      <Link to="/register">Register</Link>
-      <Link to="/signin">Sign In</Link>
-
-    </>
+    <div className="nav-links">
+      <Link to="/register" className="nav-link">
+        Register
+      </Link>
+      <Link to="/signin" className="nav-link">
+        Sign In
+      </Link>
+    </div>
   )
 
   return (
-    <header>
-      <Link to="/">Bloom Bites</Link>
-      <nav>{user ? userOptions : publicOptions}</nav>
+    <header className="nav-header">
+      <Link to="/" className="nav-logo">
+        Bloom Bites
+      </Link>
+      <nav className="nav-navi">{user ? userOptions : publicOptions}</nav>
     </header>
   )
 }
