@@ -73,8 +73,35 @@ const Cart = ({ getCartCount, user }) => {
     )
   }
 
+  return user ? (
+    <div className="cart-big-page">
+      <h1 className="cart-big-title"> Your Cart</h1>
 
-  return <></>
+      <div className="car-layout">
+        <div className="cart-items">
+          {items.map((item) => (
+            <Link key={item._id} to={`/${item.productType}/${item.productId}`} className="cart-linkitem" >
+              <div className="cart-item-card">
+                <h3>{item.productName}</h3>
+                <p>Price: {item.price}</p>
+                <p>Qty: {item.quantity}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="cart-summy">
+          <p>Total: {total}</p>
+          <button className="cartBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div className="cartGuest">
+    <h3>Oops! You need to Sign In to have items here</h3>
+    <button onClick={() => navigate("/signin")}>Sign In</button>
+    </div>
+  )
 }
 
 export default Cart
