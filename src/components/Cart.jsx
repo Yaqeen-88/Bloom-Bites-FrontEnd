@@ -23,6 +23,41 @@ const Cart = ({ getCartCount, user }) => {
     }
   }
 
+  useEffect(() => {
+    if(user) {
+      getOrders()
+      if (getCartCount) {getCartCount()}
+    } else {
+      setOrder(null)
+      setLoadingCart(false)
+    }
+  },[user])
+
+  let items = []
+  if (order && order.length > 0) {
+    for (let i = 0; i < order.length; i++){
+      if (order[i].items) {
+        items = items.concat(order[i].items)
+      }
+    }
+  }
+  let total = 0
+  for (let i = 0; i <items.length; i++) {
+    const item = items[i]
+
+    let price = 0
+    if (item.price){
+      price = item.price
+    }
+
+    let qty = 1
+    if (item.quantity){
+      qty = item.quantity
+    }
+
+    total = total + (price * qty )
+  }
+
   return <></>
 }
 
