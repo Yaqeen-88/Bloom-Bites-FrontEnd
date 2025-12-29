@@ -54,6 +54,38 @@ const Candle = () => {
         </div>
       )
     }
+
+    return (
+      <div className="candle-details-page">
+        <Link to="/candles" className="candle-goback">
+          Back to candles
+        </Link>
+
+        <h1 className="candle-detailtitle">{actCandle.name}</h1>
+
+        {actCandle.image ?
+        (
+          <img src={actCandle.image} alt={actCandle.name} className="candle-details-image" />
+        ): null}
+
+        {actCandle.price ? (
+          <p className="candle-details-price">
+            Price: {actCandle.price}
+          </p>
+        ): null}
+
+        <h3 className="candle-deDesc-title">Description</h3>
+        <p className="candle-deDesc">
+          {actCandle.description ? actCandle.description : "No description available 🫙"}
+        </p>
+        <p className="candle-shape">
+          Shape: {actCandle.shape ? actCandle.shape : "No data here ❌"}
+        </p>
+        <p className="candle-scent">
+          Scent: {actCandle.scent ? actCandle.scent : "No data here ❌"}
+        </p>
+      </div>
+    )
   }
 
   return <></>
