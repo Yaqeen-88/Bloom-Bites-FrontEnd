@@ -88,7 +88,33 @@ const Candle = () => {
     )
   }
 
-  return <></>
+  return <div className="candle-page">
+    <h1 className="candle-title"> Candles</h1>
+
+    <div className="candles-grid">
+      {candles.map((candle) => {
+        return (
+          <Link key={candle._id} to={`/candles/${candle._id}`} className="candle-link" >
+            <div className="candle-card">
+              <h3 className="candle-name">{candle.name}</h3>
+
+              {candle.image ? (
+                <img src={candle.image} alt={candle.name} className="candle-image" />
+              ) : null}
+
+              {candle.price ? (
+                <p className="candle-price">Price: {candle.price}</p>
+              ): null}
+
+              <button className="add-to-cart">Add to cart</button>
+            </div>
+          </Link>
+
+        )
+      }
+    )}
+    </div>
+  </div>
 }
 
 export default Candle
