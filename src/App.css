@@ -1,10 +1,8 @@
-body{
-  margin: 50px;
-  box-sizing: border-box;
-  display: flex;
-}
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: linear-gradient(180deg, #eafaff, #a4dbeb);
 
-nav {
-  display: flex;
-  justify-content: space-between;
+  color: #245c6d;
+  box-sizing: border-box;
 }

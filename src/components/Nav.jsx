@@ -5,10 +5,10 @@ const Nav = ({ user, handleLogout }) => {
   if(user) {
     userOptions = (
       <>
-      <h3>Welcome {user.name}!</h3>
-      <Link to='/feed'>Feed</Link>
+      {/* <h3>Welcome {user.name}!</h3> */}
+      <Link to='/'>Home</Link>
       <Link onClick={handleLogout} to='/'>
-Sign Out
+        Sign Out
       </Link>
       </>
     ) }
