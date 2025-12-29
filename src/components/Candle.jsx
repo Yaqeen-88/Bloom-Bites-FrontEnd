@@ -39,6 +39,23 @@ const Candle = () => {
     getCandles()
   }, [id])
 
+  if (loading) {
+    return <p className="candle-loading">Loading candles....</p>
+  }
+
+  if (id) {
+    if (!actCandle) {
+      return (
+        <div className="candle-notfound">
+          <p>Candle not found. 🥺</p>
+          <Link to="/candles" className="candle-goback" >
+          Back to Candles
+          </Link>
+        </div>
+      )
+    }
+  }
+
   return <></>
 }
 
