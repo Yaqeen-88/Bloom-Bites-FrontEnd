@@ -26,7 +26,7 @@ const Flower = () => {
           <h3>{flower.name}</h3>
           <p>BHD {flower.price}</p>
 
-          {!flower.stock && <span>Out of stock</span>}
+          {flower.stock === 0 && <span>Out of stock</span>}
         </div>
       ))}
     </>
