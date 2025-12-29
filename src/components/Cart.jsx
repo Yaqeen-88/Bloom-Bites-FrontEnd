@@ -58,6 +58,22 @@ const Cart = ({ getCartCount, user }) => {
     total = total + (price * qty )
   }
 
+  if (loadingCart){
+    return (
+      <p className="cart-loading">Loading cart....</p>
+    )
+  }
+
+  if (items.length === 0) {
+    return (
+      <div className="cart-empty">
+        <p className="cart-mt-text"> Oop... looks like there's nothing in your cart! </p>
+        <button onClick={() => navigate("/")} > Go Home </button>
+      </div>
+    )
+  }
+
+
   return <></>
 }
 
