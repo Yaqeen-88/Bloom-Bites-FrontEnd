@@ -6,6 +6,7 @@ import Nav from "./components/Nav"
 import Home from "./components/Home"
 import SignIn from "./components/SignIn"
 import Register from "./components/Register"
+import Flower from "./components/Flower"
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
+          <Route path='/flowers' element={<Flower/>}/>
         </Routes>
       </main>
     </>
