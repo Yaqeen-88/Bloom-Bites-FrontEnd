@@ -41,8 +41,8 @@ const App = () => {
           <Route path="/flowers/new" element={<FlowerForm user={user} />} />
           <Route
             path="/flowers/:id/edit"
-            element={<FlowerForm user={user} />}
-          />
+            element={<FlowerForm user={user} />}/>
+            <Route path="/flowers/:id" element={<Flower/>}/>
         </Routes>
       </main>
     </>

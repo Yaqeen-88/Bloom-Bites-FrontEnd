@@ -12,7 +12,6 @@ const FlowerForm = ({user}) => {
     name:"",
     description:"",
     stock:0,
-    flowerType:"",
     color:"",
     flowerArrangement:"",
     price:"",
@@ -21,18 +20,28 @@ const FlowerForm = ({user}) => {
   const getFlower = async () => {
     try{
       const response = await Bloom.get(`/flowers/${id}`)
-      setFormData(response.data)
+      const flower = response.data.flower ? response.data.flower : response.data
+      setFormData({
+        name: flower.name ||"",
+        description: flower.description ||"",
+      stock: flower.stock ??"",
+  color: flower.color ||"",
+flowerArrangement: flower.flowerArrangement ||"",
+price: flower.price ??"",
+image: flower.image ||""   })
+console.log("flower response:", response.data)
     } catch (error) {
-      console.log("An error happened while getting candle:", error)
+      console.log("An error happened while getting flower:", error)
     }
   }
   useEffect(() => {
-    if(isEdit){
+    if(isEdit && user && isAdmin){
       getFlower()
     }
-  }, [id, isEdit])
+  }, [id, isEdit, user, isAdmin])
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value})
+    const {name,value,type} = e.target
+        setFormData((prev) => ({...prev, [name]:type === "number" ? (value === "" ? "": Number(value)) :value}))
   }
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -45,7 +54,7 @@ const FlowerForm = ({user}) => {
       }
       navigate("/flowers")
     } catch (error) {
-      console.log("An error happened saving candle:", error)
+      console.log("An error happened saving flower:", error)
     }
   }
 
@@ -67,7 +76,7 @@ const FlowerForm = ({user}) => {
   }
   return(
     <div className="flower-form-page">
-      <h1 className='candle-form-title'>
+      <h1 className='flower-form-title'>
 {isEdit ? "Edit Flower" : "Add New Flower"}
       </h1>
 
@@ -80,9 +89,6 @@ const FlowerForm = ({user}) => {
 
   <input type="number" name="stock" placeholder="Stock"
   value={formData.stock} onChange={handleChange} required />
-
-  <input name="flowerType" type="text" placeholder="flowerType"
-  value={formData.flowerType} onChange={handleChange} required />
 
   <input name="color" type="text" placeholder="color"
   value={formData.color} onChange={handleChange} required />
