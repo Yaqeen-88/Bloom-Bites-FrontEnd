@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 import { CheckSession } from "./services/Auth"
+import Cake from "./components/Cake"
+import About from "./components/About"
+
 
 import Nav from "./components/Nav"
 import Home from "./components/Home"
@@ -37,6 +40,8 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
+          <Route path="/cake" element={<Cake/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
       </main>
     </>
