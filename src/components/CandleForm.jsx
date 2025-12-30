@@ -43,7 +43,14 @@ const CandleForm = ({user}) => {
     }
   }, [id, isEdit, user, isAdmin])
 
-  
+  const handleChange = (e) => {
+    const { name, value, type } = e.target
+    setFormData((prev) =>  ({
+      ...prev,
+      [name]: type === "number" ? (value === "" ? "" : Number(value)) :value
+    }))
+  }
+
   return <></>
 }
 
