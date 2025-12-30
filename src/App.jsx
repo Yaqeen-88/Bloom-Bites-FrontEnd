@@ -42,7 +42,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
           <Route path="/About" element={<About/>}   />
-          <Route path="/cake" element={<Cake/>}/>
+          <Route path="/cake" element={<Cake user={user}/>}/>
           <Route path="/cake/:id" element={<Cake user={user} />}/>
           <Route path="/cake/new" element={<CakeForm user={user} />} />
           <Route path="/cake/:id/edit" element={<CakeForm user={user} />} />

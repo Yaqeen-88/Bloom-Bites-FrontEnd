@@ -9,7 +9,7 @@ const Nav = ({ user, handleLogout, cartCount }) => {
       <Link to='/' className="nav-link">Home</Link>
 
       <Link to="/cart" className="nav-cart">
-      :shopping_trolley:
+      🛒
       {cartCount > 0 ? (
         <span className="cart-count">{cartCount}</span>
       ): null}
@@ -32,7 +32,10 @@ const Nav = ({ user, handleLogout, cartCount }) => {
 
   return (
     <header className="nav-header">
+      <div className="nav-left">
+      <img src="https://i.imgur.com/Sziqx4n.png" alt="bloom-bites logo" height= "100"/>
       <Link to="/" className="nav-logo">Bloom Bites</Link>
+      </div>
       <nav className="nav-navi">{user ? userOptions : publicOptions}</nav>
     </header>
   )
