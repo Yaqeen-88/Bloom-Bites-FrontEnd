@@ -29,7 +29,7 @@ const Home = () => {
           <h3>Candles</h3>
           <p>Explore our candles collection</p>
         </div>
-        <div className="card" onClick={() => navigate("/cakes")}>
+        <div className="card" onClick={() => navigate("/cake")}>
           <img
             src="https://i.pinimg.com/736x/23/bd/65/23bd65437e45f02562a867a0afd8044d.jpg"
             alt="Cake"
