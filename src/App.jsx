@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 import { CheckSession } from "./services/Auth"
+import Cake from "./components/Cake"
+import About from "./components/About"
+import CakeForm from "./components/CakeForm"
+
 import Bloom from "./services/api"
 import "./App.css"
 
@@ -110,6 +114,11 @@ const App = () => {
           <Route path="/flowers/new" element={<FlowerForm user={user} />} />
           <Route path="/flowers/:id/edit"element={<FlowerForm user={user} />}/>
             <Route path="/flowers/:id" element={<Flower addToCart={addToCart} user={user}/>}/>
+          <Route path="/About" element={<About/>}   />
+          <Route path="/cake" element={<Cake user={user}/>}/>
+          <Route path="/cake/:id" element={<Cake user={user} />}/>
+          <Route path="/cake/new" element={<CakeForm user={user} />} />
+          <Route path="/cake/:id/edit" element={<CakeForm user={user} />} />
         </Routes>
       </main>
     </>

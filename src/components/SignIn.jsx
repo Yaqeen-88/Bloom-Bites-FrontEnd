@@ -22,8 +22,9 @@ const handleSubmit = async (e) => {
 }
 
 return(
-  <>
-<form onSubmit={handleSubmit}>
+  <div  className="signin-page">
+  <form className="signin-form" onSubmit={handleSubmit}>
+  <h1 className="signin-title">Welcome Back 💓</h1>
 
 <div>
   <label htmlFor='email'>Email</label>
@@ -46,7 +47,7 @@ return(
 </form>
 
 
-  </>
+  </div>
 )
 }
 export default SignIn
