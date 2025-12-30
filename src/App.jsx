@@ -115,8 +115,8 @@ const App = () => {
           <Route path="/flowers/:id/edit"element={<FlowerForm user={user} />}/>
             <Route path="/flowers/:id" element={<Flower addToCart={addToCart} user={user}/>}/>
           <Route path="/About" element={<About/>}   />
-          <Route path="/cake" element={<Cake user={user}/>}/>
-          <Route path="/cake/:id" element={<Cake user={user} />}/>
+          <Route path="/cake" element={<Cake addToCart={addToCart} user={user}/>}/>
+          <Route path="/cake/:id" element={<Cake addToCart={addToCart} user={user} />}/>
           <Route path="/cake/new" element={<CakeForm user={user} />} />
           <Route path="/cake/:id/edit" element={<CakeForm user={user} />} />
         </Routes>
