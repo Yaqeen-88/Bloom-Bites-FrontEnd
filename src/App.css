@@ -1128,9 +1128,7 @@ body {
   }
 }
 
-/* =======================
-   SIGN IN PAGE
-======================= */
+/* signin page*/
 
 .signin-page {
   min-height: 100vh;
@@ -1141,9 +1139,7 @@ body {
   padding: 24px;
 }
 
-/* =======================
-   SIGN IN FORM
-======================= */
+
 
 .signin-form {
   width: 100%;
@@ -1157,10 +1153,6 @@ body {
   gap: 18px;
 }
 
-/* =======================
-   FORM TITLE
-======================= */
-
 .signin-title {
   margin: 0 0 10px;
   text-align: center;
@@ -1169,9 +1161,6 @@ body {
   color: #D81B7D;
 }
 
-/* =======================
-   INPUT GROUPS
-======================= */
 
 .signin-form div {
   display: flex;
@@ -1204,7 +1193,7 @@ body {
   box-shadow: 0 0 0 3px rgba(216, 27, 125, 0.25);
 }
 
-/* buttons BUTTON */
+/* buttons*/
 
 .signin-form button {
   margin-top: 10px;
@@ -1311,7 +1300,7 @@ h2 {
   align-items: center;
 }
 
-why-bloom-bites-list li {
+.why-bloom-bites-list li {
   background: linear-gradient(135deg, #87466b 50%, #faf5ff 100%);
   border-radius: 20px;
   padding: 40px 25px;
@@ -1351,7 +1340,6 @@ p {
   margin-top: 20px;
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .About-container {
     padding: 60px 16px;
