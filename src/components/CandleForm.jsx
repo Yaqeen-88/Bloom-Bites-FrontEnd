@@ -51,6 +51,22 @@ const CandleForm = ({user}) => {
     }))
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      if(isEdit) {
+        await Bloom.put(`/candles/${id}`, formData)
+      } else {
+        await Bloom.post("/candles", formData)
+      }
+      navigate("/candles")
+    } catch (error) {
+      console.log("An error happened saving candle:", error);
+
+    }
+  }
+
   return <></>
 }
 
