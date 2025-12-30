@@ -85,7 +85,37 @@ const CandleForm = ({user}) => {
     )
   }
 
-  return <></>
+  return (
+  <div className="candle-form-page">
+    <h1 className="candle-form-title">
+      {isEdit ? "Edit Candle" : "Add New Candle"}
+    </h1>
+
+    <form className="candle-form" onSubmit={handleSubmit}>
+      <input name="name" type="text" placeholder="Candle name" value={formData.name} onChange={handleChange} required/>
+
+      <input name="price" type="number" placeholder="Price" value={formData.price} onChange={handleChange} required />
+
+      <input type="text" name="image" placeholder="Image URL" value={formData.image} onChange={handleChange} required />
+
+      <input type="number" name="stock" placeholder="Stock" value={formData.stock} onChange={handleChange} />
+
+      <input name="scent" placeholder="Scent" value={formData.scent} onChange={handleChange} />
+
+      <input name="shape" placeholder="Shape" value={formData.shape} onChange={handleChange} />
+
+      <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange}/>
+
+      <div className="candle-form-act">
+        <button type="submit">
+          {isEdit ? "Update Candle" : "Create Candle"}
+        </button>
+
+        <Link to="/candles">Cancel</Link>
+      </div>
+    </form>
+  </div>
+)
 }
 
 export default CandleForm
