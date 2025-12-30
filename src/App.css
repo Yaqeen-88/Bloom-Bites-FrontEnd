@@ -965,3 +965,160 @@ body {
   margin: 0;
 }
 
+
+/* =======================
+   CAKE FORM PAGE
+======================= */
+
+.cake-form-page {
+  min-height: calc(100vh - 78px);
+  padding: 48px 22px 70px;
+  background: #D2B9F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cake-form-title {
+  margin: 0 0 22px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #7A4BC4;
+  text-align: center;
+}
+
+/* form container */
+
+.cake-form {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 22px;
+  padding: 26px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* form inputs and text area */
+
+.cake-form input,
+.cake-form textarea {
+  width: 85%;
+  align-self: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  background: white;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cake-form textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.cake-form input::placeholder,
+.cake-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+}
+
+.cake-form input:focus,
+.cake-form textarea:focus {
+  border-color: #7A4BC4;
+  box-shadow: 0 0 0 3px rgba(122, 75, 196, 0.2);
+}
+
+ /* form action */
+
+.cake-form-act {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  gap: 16px;
+}
+
+
+
+.cake-form-act button {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #7A4BC4, #9B6EDC);
+  box-shadow: 0 12px 24px rgba(122, 75, 196, 0.35);
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.cake-form-act button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.cake-form-act a {
+  flex: 1;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(122, 75, 196, 0.3);
+  color: #7A4BC4;
+}
+
+
+
+/* auth and forbdn*/
+
+.cake-form-notauth,
+.cake-form-forbdn {
+  min-height: calc(100vh - 78px);
+  background: #D2B9F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1B2B34;
+  text-align: center;
+}
+
+.cake-form-notauth a,
+.cake-form-forbdn a {
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(122, 75, 196, 0.3);
+  color: #7A4BC4;
+}
+
+
+@media (max-width: 520px) {
+  .cake-form {
+    padding: 22px 18px;
+  }
+
+  .cake-form-title {
+    font-size: 32px;
+  }
+
+  .cake-form-act {
+    flex-direction: column;
+  }
+}
