@@ -1228,3 +1228,8 @@ min-height: calc(100vh - 78px);
   text-decoration: none;
   color: inherit;
 }
+.flower-page .add-to-cart,
+.flower-details-page .add-to-cart {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  box-shadow: 0 10px 20px rgba(46, 125, 50, 0.25);
+}
