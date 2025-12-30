@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import '../App.css'
+import "../App.css"
 
 const Nav = ({ user, handleLogout, cartCount }) => {
   let userOptions
@@ -9,7 +9,7 @@ const Nav = ({ user, handleLogout, cartCount }) => {
       <Link to='/' className="nav-link">Home</Link>
 
       <Link to="/cart" className="nav-cart">
-      🛒
+      <span className="nav-carticon">🛒</span>
       {cartCount > 0 ? (
         <span className="cart-count">{cartCount}</span>
       ): null}
@@ -42,10 +42,3 @@ const Nav = ({ user, handleLogout, cartCount }) => {
 }
 
 export default Nav
-
-
-
-
-
-
-
