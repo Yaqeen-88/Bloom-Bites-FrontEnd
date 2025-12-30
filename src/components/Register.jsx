@@ -30,7 +30,8 @@ const Register = () => {
     navigate('/signin')
   }
 return(
-  <>
+  <div className='register-page'>
+    <div className='register-card'>
 
 <form onSubmit={handleSubmit}>
   <div>
@@ -57,8 +58,8 @@ return(
   !formValues.email || (!formValues.password && formValues.password === formValues.confirmPassword)
 }>Register</button>
 </form>
-
-  </>
+</div>
+  </div>
 )
 
 }
