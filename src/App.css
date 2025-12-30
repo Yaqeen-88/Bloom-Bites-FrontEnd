@@ -94,6 +94,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  border-radius: 25px;
 }
 .main h1 {
   margin: 0 0 14px;
@@ -117,6 +118,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
+  border-radius: 25px;
 }
 .card {
   cursor: pointer;
@@ -1848,7 +1850,7 @@ min-height: calc(100vh - 78px);
   font-style: italic;
   color: #7b4cff;
   margin-bottom: 32px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .About-container p {

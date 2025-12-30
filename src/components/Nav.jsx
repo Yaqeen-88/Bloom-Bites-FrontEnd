@@ -7,7 +7,7 @@ const Nav = ({ user, handleLogout, cartCount }) => {
     userOptions = (
       <div className="nav-links">
       <Link to='/' className="nav-link">Home</Link>
-
+      <Link to="/about" className="nav-link">About</Link>
       <Link to="/cart" className="nav-cart">
       <span className="nav-carticon">🛒</span>
       {cartCount > 0 ? (
