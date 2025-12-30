@@ -67,6 +67,24 @@ const CandleForm = ({user}) => {
     }
   }
 
+  if(!user) {
+    return (
+      <div className="candle-form-notauth">
+        <p>You must sign in to access this page.</p>
+        <Link to="/signin">Sign In</Link>
+      </div>
+    )
+  }
+
+  if (!isAdmin) {
+    return (
+      <div className="candle-form-forbdn">
+        <p>You do not have permission to be here 🙂</p>
+        <Link to="/candles">Back to Candles</Link>
+      </div>
+    )
+  }
+
   return <></>
 }
 
