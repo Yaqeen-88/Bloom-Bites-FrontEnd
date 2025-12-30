@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { CheckSession } from "./services/Auth"
 import Cake from "./components/Cake"
 import About from "./components/About"
+import CakeForm from "./components/CakeForm"
 
 
 import Nav from "./components/Nav"
@@ -40,8 +41,11 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
+          <Route path="/About" element={<About/>}   />
           <Route path="/cake" element={<Cake/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/cake/:id" element={<Cake user={user} />}/>
+          <Route path="/cake/new" element={<CakeForm user={user} />} />
+          <Route path="/cake/:id/edit" element={<CakeForm user={user} />} />
         </Routes>
       </main>
     </>
