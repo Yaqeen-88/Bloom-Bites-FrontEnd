@@ -106,12 +106,10 @@ const App = () => {
           <Route path="/candles/:id" element={<Candle addToCart={addToCart} user={user} />} />
           <Route path="/candles/new" element={<CandleForm user={user} />} />
           <Route path="/candles/:id/edit" element={<CandleForm user={user} />} />
-          <Route path="/flowers" element={<Flower />} />
+          <Route path="/flowers" element={<Flower addToCart={addToCart} user={user}/>} />
           <Route path="/flowers/new" element={<FlowerForm user={user} />} />
-          <Route
-            path="/flowers/:id/edit"
-            element={<FlowerForm user={user} />}/>
-            <Route path="/flowers/:id" element={<Flower/>}/>
+          <Route path="/flowers/:id/edit"element={<FlowerForm user={user} />}/>
+            <Route path="/flowers/:id" element={<Flower addToCart={addToCart} user={user}/>}/>
         </Routes>
       </main>
     </>

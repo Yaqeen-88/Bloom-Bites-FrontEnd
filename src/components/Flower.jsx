@@ -64,7 +64,7 @@ const Flower = ({ addToCart, user }) => {
     }
     return (
       <div className="flower-details-page">
-        <Link to="flowers" className="flower-goback">
+        <Link to="/flowers" className="flower-goback">
           Back to Flowers
         </Link>
         <h1 className="flower-detailtitle">{actFlower.name}</h1>
@@ -86,7 +86,7 @@ const Flower = ({ addToCart, user }) => {
             <img
               src={actFlower.image}
               alt={actFlower.name}
-              className="candle-details-image"
+              className="flower-details-image"
             />
           ) : null}
 
@@ -136,7 +136,7 @@ const Flower = ({ addToCart, user }) => {
             <Link
               key={flower._id}
               to={`/flowers/${flower._id}`}
-              className="candle-link"
+              className="flower-link"
             >
               <div className="flower-card">
                 <div className="flower-card-media">
