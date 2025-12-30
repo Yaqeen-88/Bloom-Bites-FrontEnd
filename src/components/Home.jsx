@@ -15,7 +15,7 @@ const Home = () => {
       <section className="categories">
         <div className="card" onClick={() => navigate("/flowers")}>
           <img
-            src="https://samedayflowers.pk/wp-content/uploads/2024/09/image_b277b755-2518-49c0-90ea-41c782e5ea99_540x-jpg.webp"
+            src="https://i.pinimg.com/736x/a6/52/2c/a6522c053a912205faf451bf7732fe51.jpg"
             alt="Flowers"
           />
           <h3>Flowers</h3>
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <div className="card" onClick={() => navigate("/candles")}>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk9mKnZtou4z-1cQzf_4dcUXL5o_W9DPbhLA&s"
+            src="https://m.media-amazon.com/images/I/71CIs17-OzL.jpg"
             alt="Candles"
           />
           <h3>Candles</h3>
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
         <div className="card" onClick={() => navigate("/cakes")}>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1xnFFWOyNy--anTWgCbcnAzy3NIUhp6Bczg&s"
+            src="https://i.pinimg.com/736x/23/bd/65/23bd65437e45f02562a867a0afd8044d.jpg"
             alt="Cake"
           />
           <h3>Cakes</h3>
