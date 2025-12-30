@@ -10,12 +10,42 @@ import SignIn from "./components/SignIn"
 import Register from "./components/Register"
 import Cart from "./components/Cart"
 import Candle from "./components/Candle"
+import CandleForm from "./components/CandleForm"
 
 
 const App = () => {
   const [user, setUser] = useState(null)
-
   const [cartCount, setCartCount] = useState(0)
+
+  const addToCart = async (e, productType, product) => {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+
+    try {
+      const item = {
+        productType: productType,
+        productId: product._id,
+        productName: product.name,
+        productImage: product.image,
+        price: product.price,
+        quantity: 1
+      }
+
+      const addedItem = {
+        items: [item],
+        total: item.price * item.quantity
+      }
+
+      await Bloom.post("/orders", addedItem)
+
+      console.log("Added to cart!");
+      getCartCount()
+    } catch (error) {
+      console.log("Oh no! Something happened while adding to cart:", error);
+    }
+  }
 
   const handleLogout = () => {
     setUser(null)
@@ -26,27 +56,29 @@ const App = () => {
   const checkToken = async () => {
     const userData = await CheckSession()
     setUser(userData)
+
   }
 
   const getCartCount = async () => {
     try{
       const res = await Bloom.get("/orders")
+      const orders = res.data
 
-      let items = []
-      if (res.data.order && res.data.order.items) {
-        items = res.data.order.items
+      let count = 0
+
+      for (let i = 0; i < orders.length; i++) {
+        const order = orders[i]
+        const items = order.items ? order.items : []
+
+        for (let j = 0; j < items.length; j++) {
+          const quan = items[j].quantity ? items[j].quantity : 1
+          count = count + quan
+        }
       }
 
-      const count = items.reduce((sum, item) => {
-        if (item.quantity) {
-          return sum + item.quantity
-        } else {
-          return sum + 1
-        }
-      }, 0)
       setCartCount(count)
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(error);
       setCartCount(0)
     }
   }
@@ -55,6 +87,7 @@ const App = () => {
     const token = localStorage.getItem("token")
     if (token) {
       checkToken()
+      getCartCount()
     }
   }, [])
 
@@ -67,8 +100,10 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<Cart user={user} getCartCount={getCartCount} />} />
-          <Route path="/candles" element={<Candle />} />
-          <Route path="/candles/:id" element={<Candle/>} />
+          <Route path="/candles" element={<Candle addToCart={addToCart} user={user} />} />
+          <Route path="/candles/:id" element={<Candle addToCart={addToCart} user={user} />} />
+          <Route path="/candles/new" element={<CandleForm user={user} />} />
+          <Route path="/candles/:id/edit" element={<CandleForm user={user} />} />
         </Routes>
       </main>
     </>
