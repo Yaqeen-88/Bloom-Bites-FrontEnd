@@ -1,16 +1,49 @@
-# React + Vite
+# Bloom-Bites-BackEnd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Idea description
+The application is a gift shop that offers flowers, cakes, and candles. Users can create custom gift sets by combining two items, ensuring that each gift is unique. Also, the app offers full customization for cakes, allowing users to choose from different flavors, sizes, decorations, and personalized messages. By giving users the ability to tailor gifts to any occasion, such as birthdays, anniversaries, or special celebrations, the app makes the gifting experience both meaningful and convenient.
 
-Currently, two official plugins are available:
+#### Logo:
+![App Logo](https://i.imgur.com/Sziqx4n.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## App ERD
+![App ERD](https://i.imgur.com/fG8aXrv.png)
 
-## React Compiler
+## Component Hierarchy Diagram 
+![Component Hierarchy Diagram](https://i.imgur.com/k6WFVKj.png)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Trello board link
+[Trello Board](https://trello.com/b/vCNBSwZw/bloom-bites)
 
-## Expanding the ESLint configuration
+## App wireframe
+[App wireframe](https://www.figma.com/make/LP1hvOC3iGi3gBu5ElOJZc/Writing-Tool-with-Organization?node-id=0-4&t=syYsg2KVlJXewL80-1)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deployment  Link
+FrontEnd
+[Bloom-Bites-FrontEnd](http://bloom-bites.surge.sh/)
+
+backEnd
+[Bloom-Bites-BackEnd](https://bloom-bites.onrender.com/)
+
+## Screenshots of the APP
+Home Page
+![home page](https://i.imgur.com/BqpX7fu.png)
+
+Cart Page
+![cart page](https://i.imgur.com/eRiroLW.png)
+
+Candle Page
+![candle page](https://i.imgur.com/7wmGLKe.png)
+
+## Future enhancements
+* Add customization for cake and candles and flower bouquets.
+* Add the stock logic dynamic.
+* inhancing Add to cart button.
+
+## Technologies used
+* Node.js
+* mongoose.
+* express.js.
+* bcrypt.
+  
+
