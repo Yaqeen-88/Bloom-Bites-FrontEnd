@@ -158,7 +158,7 @@ const Cake = ({ addToCart, user }) => {
                       addToCart(e, "cakes", cake)
                     }}
                   >
-                    Add to cart🛒
+                    Add to cart 🛒
                   </button>
                 </div>
               </div>
